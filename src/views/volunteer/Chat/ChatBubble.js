@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 const ChatBubble = (props) => {
   const classes = useStyles(props)
 
-  const { direction, text, time } = props
+  const { direction, text, time , name} = props
 
   return (
     <Grid container className={classes.root}>
@@ -47,7 +47,7 @@ const ChatBubble = (props) => {
           <Typography
             style={{ color: direction == 'right' ? 'white' : 'black' }}
           >
-            {time}
+            Sent by: {name} @ {time} 
           </Typography>
         </Grid>
       </Box>

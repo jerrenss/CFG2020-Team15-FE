@@ -77,25 +77,28 @@ const ChatWindow = () => {
           <List className={classes.messageArea}>
             <ListItem key="1">
               <ChatBubble
-                direction="left"
+                direction="right"
                 text="Hello how's everyone doing? There is a an upcoming lesson this Friday."
                 time="09.30"
+                name="Tan Swee Keat"
               />
             </ListItem>
 
             <ListItem key="2">
               <ChatBubble
-                direction="right"
+                direction="left"
                 text="Alright, Mr Tan!"
                 time="09.30"
+                name="Maurice"
               />
             </ListItem>
 
             <ListItem key="3">
               <ChatBubble
-                direction="right"
+                direction="left"
                 text="Will be attending"
                 time="09.30"
+                name="Maurice"
               />
             </ListItem>
           </List>
