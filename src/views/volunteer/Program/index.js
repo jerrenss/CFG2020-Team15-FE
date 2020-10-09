@@ -18,7 +18,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import Overview from './overview'
 import Materials from './materials'
 import Submission from './submission'
-import Gradebook from './gradebook'
+import Attendance from './attendance'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -98,8 +98,8 @@ export default function Program() {
         return <Overview />
       case 'Materials':
         return <Materials />
-      case 'Gradebook':
-        return <Gradebook />
+      case 'Attendance':
+        return <Attendance />
       case 'Submission':
         return <Submission />
       case 'Feedback':
@@ -135,11 +135,11 @@ export default function Program() {
               </ListItemIcon>
               <ListItemText primary="Materials" />
             </ListItem>
-            <ListItem button onClick={() => setCurrentTab('Gradebook')}>
+            <ListItem button onClick={() => setCurrentTab('Attendance')}>
               <ListItemIcon>
                 <GradeIcon />
               </ListItemIcon>
-              <ListItemText primary="Gradebook" />
+              <ListItemText primary="Attendance" />
             </ListItem>
             <ListItem button onClick={() => setCurrentTab('Submission')}>
               <ListItemIcon>
