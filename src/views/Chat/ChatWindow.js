@@ -14,6 +14,7 @@ import Avatar from '@material-ui/core/Avatar'
 import Fab from '@material-ui/core/Fab'
 import SendIcon from '@material-ui/icons/Send'
 import ChatBubble from './ChatBubble'
+import ReceiptIcon from '@material-ui/icons/Receipt'
 
 const useStyles = makeStyles({
   table: {
@@ -55,31 +56,19 @@ const ChatWindow = () => {
           <List>
             <ListItem button key="RemySharp">
               <ListItemIcon>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="https://material-ui.com/static/images/avatar/1.jpg"
-                />
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
               </ListItemIcon>
-              <ListItemText primary="Remy Sharp">Remy Sharp</ListItemText>
-              {/* <ListItemText secondary="online" align="right"></ListItemText> */}
+              <ListItemText>JA - Leader Dialog</ListItemText>
             </ListItem>
             <ListItem button key="Alice">
               <ListItemIcon>
-                <Avatar
-                  alt="Alice"
-                  src="https://material-ui.com/static/images/avatar/3.jpg"
-                />
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
               </ListItemIcon>
-              <ListItemText primary="Alice">Alice</ListItemText>
-            </ListItem>
-            <ListItem button key="CindyBaker">
-              <ListItemIcon>
-                <Avatar
-                  alt="Cindy Baker"
-                  src="https://material-ui.com/static/images/avatar/2.jpg"
-                />
-              </ListItemIcon>
-              <ListItemText primary="Cindy Baker">Cindy Baker</ListItemText>
+              <ListItemText>JA - Entrepreneurship</ListItemText>
             </ListItem>
           </List>
         </Grid>
@@ -88,16 +77,16 @@ const ChatWindow = () => {
           <List className={classes.messageArea}>
             <ListItem key="1">
               <ChatBubble
-                direction="right"
-                text="Hello what's up?"
+                direction="left"
+                text="Hello how's everyone doing? There is a an upcoming lesson this Friday."
                 time="09.30"
               />
             </ListItem>
 
             <ListItem key="2">
               <ChatBubble
-                direction="left"
-                text="Hello what's up?"
+                direction="right"
+                text="Alright, Mr Tan!"
                 time="09.30"
               />
             </ListItem>
@@ -105,7 +94,7 @@ const ChatWindow = () => {
             <ListItem key="3">
               <ChatBubble
                 direction="right"
-                text="Hello what's up?"
+                text="Will be attending"
                 time="09.30"
               />
             </ListItem>
