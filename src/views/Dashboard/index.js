@@ -32,7 +32,6 @@ export default function Dashboard() {
           {programCards}
         </Grid>
       </Container>
-      >>>>>>> 37fa5d0a96231cdba7e6efe29d9bffc0bcfd9df6
     </div>
   )
 }

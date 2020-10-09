@@ -56,7 +56,7 @@ export default function Navbar() {
             <Link
               variant="button"
               color="textPrimary"
-              href="#"
+              href="/dashboard"
               className={classes.link}
             >
               All Progams
@@ -64,7 +64,7 @@ export default function Navbar() {
             <Link
               variant="button"
               color="textPrimary"
-              href="#"
+              href="/dashboard"
               className={classes.link}
             >
               My Programs
@@ -72,7 +72,7 @@ export default function Navbar() {
             <Link
               variant="button"
               color="textPrimary"
-              href="#"
+              href="/dashboard/profile"
               className={classes.link}
             >
               Profile
