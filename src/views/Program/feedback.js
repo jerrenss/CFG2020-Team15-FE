@@ -87,68 +87,56 @@ const Feedback = (props) => {
       <Box className={classes.root}>
         <Container maxWidth="md">
           <form className={classes.form}>
-            <Grid container spacing={1}>
-              <Grid item xs={4} lg={2}>
+            <Grid container spacing={3}>
+              <Grid item xs={5} lg={3}>
                 <Typography>How was the pace of the workshop?</Typography>
               </Grid>
-              <Grid item xs={8} lg={10}>
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                  name="poc_name"
-                  id="poc_name"
-                  InputLabelProps={{ shrink: true }}
+              <Grid item xs={7} lg={9}>
+                <Rating
+                  name="pace"
+                  defaultValue={0}
+                  getLabelText={(value) => customIcons[value].label}
+                  IconContainerComponent={IconContainer}
                 />
               </Grid>
-              <Grid item xs={4} lg={2}>
-                <Typography>How was the pace of the workshop?</Typography>
+              <Grid item xs={5} lg={3}>
+                <Typography>Were there enough materials provided?</Typography>
               </Grid>
-              <Grid item xs={8} lg={10}>
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                  name="poc_designation"
-                  id="poc_designation"
-                  InputLabelProps={{ shrink: true }}
+              <Grid item xs={7} lg={9}>
+                <Rating
+                  name="materials"
+                  defaultValue={0}
+                  getLabelText={(value) => customIcons[value].label}
+                  IconContainerComponent={IconContainer}
                 />
               </Grid>
-              <Grid item xs={4} lg={2}>
-                <Typography>PHow was the pace of the workshop?</Typography>
+              <Grid item xs={5} lg={3}>
+                <Typography>
+                  How would you rate your mentor's teaching ability?
+                </Typography>
               </Grid>
-              <Grid item xs={8} lg={10}>
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                  name="poc_email"
-                  id="poc_email"
-                  InputLabelProps={{ shrink: true }}
+              <Grid item xs={7} lg={9}>
+                <Rating
+                  name="teaching-ability"
+                  defaultValue={0}
+                  getLabelText={(value) => customIcons[value].label}
+                  IconContainerComponent={IconContainer}
                 />
               </Grid>
-              <Grid item xs={4} lg={2}>
-                <Typography>How was the pace of the workshop?</Typography>
+              <Grid item xs={5} lg={3}>
+                <Typography>
+                  Are there any other feedback you would like to provide?
+                </Typography>
               </Grid>
-              <Grid item xs={8} lg={10}>
+              <Grid item xs={7} lg={9}>
                 <TextField
                   variant="outlined"
                   margin="normal"
                   fullWidth
+                  multiline
                   name="poc_contact_number"
                   id="poc_contact_number"
                   InputLabelProps={{ shrink: true }}
-                />
-              </Grid>
-              <Grid item xs={4} lg={2}>
-                <Typography>How was the pace of the workshop?</Typography>
-              </Grid>
-              <Grid item xs={8} lg={10}>
-                <Rating
-                  name="customized-icons"
-                  defaultValue={2}
-                  getLabelText={(value) => customIcons[value].label}
-                  IconContainerComponent={IconContainer}
                 />
               </Grid>
             </Grid>
@@ -159,7 +147,7 @@ const Feedback = (props) => {
               color="primary"
               className={classes.submit}
             >
-              Save
+              Submit
             </Button>
           </form>
         </Container>
