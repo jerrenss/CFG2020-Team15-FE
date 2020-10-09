@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function Programs() {
-
+export default function Program(props) {
+    console.log(props.program);
     const classes = useStyles();
     const programs = [1,2,3,4,5,6,7,8,9];
     let programCards = [];
