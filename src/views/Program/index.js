@@ -17,6 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Overview from './overview';
 import Materials from './materials';
+import Gradebook from './gradebook';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -119,7 +120,8 @@ export default function Program() {
       </Drawer>  
           <div className={classes.content}>
             {/* <Overview program={program}/> */}
-            <Materials />
+            {/* <Materials /> */}
+            <Gradebook />
           </div>
     </div>
   );
