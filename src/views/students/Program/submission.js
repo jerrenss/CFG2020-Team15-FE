@@ -90,11 +90,9 @@ function createData(name, uploadedDate) {
 }
 
 const rows = [
-    createData('lesson1_submission_1.doc', new Date().toISOString()),
-    createData('lesson1_submission_2', new Date().toISOString()),
+    createData('lesson1_submission_1.doc', new Date().toUTCString()),
+    createData('lesson1_submission_2.pdf', new Date().toUTCString()),
 ];
-
-
 
 export default function Overview(props) {
     const classes = useStyles();
