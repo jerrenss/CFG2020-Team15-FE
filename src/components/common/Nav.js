@@ -55,7 +55,7 @@ const Nav = (props) => {
         >
           <PublicIcon />
         </IconButton>
-        <Typography className={classes.title}>JA Hong Kong</Typography>
+        <Typography className={classes.title}>Logged In As: Student</Typography>
         {/* <Link href="/student/programs">
           <Button className={classes.button}>Analytics</Button>
         </Link> */}

@@ -55,7 +55,9 @@ const VolunteerNav = (props) => {
         >
           <PublicIcon />
         </IconButton>
-        <Typography className={classes.title}>JA Hong Kong</Typography>
+        <Typography className={classes.title}>
+          Logged In As: Volunteer
+        </Typography>
         <Link href="/volunteer/programs">
           <Button className={classes.button}>All Programs</Button>
         </Link>

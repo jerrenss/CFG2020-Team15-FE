@@ -55,7 +55,7 @@ const AdminNav = (props) => {
         >
           <PublicIcon />
         </IconButton>
-        <Typography className={classes.title}>JA Hong Kong</Typography>
+        <Typography className={classes.title}>Logged In As: Admin</Typography>
         <Link href="#">
           <Button className={classes.button}>Analytics</Button>
         </Link>
