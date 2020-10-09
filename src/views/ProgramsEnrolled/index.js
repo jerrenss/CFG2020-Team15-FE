@@ -17,26 +17,26 @@ export default function Dashboard() {
     const programs = [
         {
             id:"1",
-            title:"JA Leader Dialogue",
-            attendence:"10/12",
-            progress:50
+            title:"JA Building A Financially Capable Generation",
+            attendence:"3/12",
+            progress:25
         },
         {
             id:"2",
-            title:"JA Leader Dialogue",
+            title:"JA Career Dimemsions 4.0",
             attendence:"10/12",
-            progress:50
+            progress:80
         },{
             id:"3",
-            title:"JA Leader Dialogue",
-            attendence:"10/12",
+            title:"JA Company Programme",
+            attendence:"6/12",
             progress:50
         },
         {
             id:"4",
             title:"JA Leader Dialogue",
-            attendence:"10/12",
-            progress:50
+            attendence:"11/12",
+            progress:90
         },
     ];
     let programCards = [];
