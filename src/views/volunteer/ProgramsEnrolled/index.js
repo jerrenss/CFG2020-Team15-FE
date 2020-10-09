@@ -3,7 +3,7 @@ import VolunteerNav from '../../../components/common/VolunteerNav.js'
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import ProgramEnrolledCard from '../../../components/common/ProgramEnrolledCard.js'
+import ProgramTeachingCard from '../../../components/common/ProgramTeachingCard.js'
 
 const useStyles = makeStyles((theme) => ({
     cardGrid: {
@@ -43,7 +43,7 @@ export default function Dashboard() {
     for (let i = 0; i < programs.length; ++i) {
         programCards.push(
             <Grid item xs={12} sm={12} md={6} lg={4} spacing={3} key={`item_${i}`}>
-                <ProgramEnrolledCard program={programs[i]}/>
+                <ProgramTeachingCard program={programs[i]}/>
             </Grid>
         )
     }
