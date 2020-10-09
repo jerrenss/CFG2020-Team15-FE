@@ -1,11 +1,10 @@
-import React from 'react';
-import Nav from '../../components/common/Nav.js'
+import React from 'react'
+import Nav from '../../components/common/Navbar.js'
 
 export default function Dashboard() {
- 
   return (
     <div>
-        <Nav />
+      <Nav />
     </div>
-    );
+  )
 }
