@@ -13,6 +13,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Avatar from '@material-ui/core/Avatar'
 import Fab from '@material-ui/core/Fab'
 import SendIcon from '@material-ui/icons/Send'
+import ChatBubble from './ChatBubble'
 
 const useStyles = makeStyles({
   table: {
@@ -105,43 +106,27 @@ const ChatWindow = () => {
         <Grid item xs={9}>
           <List className={classes.messageArea}>
             <ListItem key="1">
-              <Grid container>
-                <Grid item xs={12}>
-                  <ListItemText
-                    align="right"
-                    primary="Hey man, What's up ?"
-                  ></ListItemText>
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText align="right" secondary="09:30"></ListItemText>
-                </Grid>
-              </Grid>
+              <ChatBubble
+                direction="right"
+                text="Hello what's up?"
+                time="09.30"
+              />
             </ListItem>
+
             <ListItem key="2">
-              <Grid container>
-                <Grid item xs={12}>
-                  <ListItemText
-                    align="left"
-                    primary="Hey, Iam Good! What about you ?"
-                  ></ListItemText>
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText align="left" secondary="09:31"></ListItemText>
-                </Grid>
-              </Grid>
+              <ChatBubble
+                direction="left"
+                text="Hello what's up?"
+                time="09.30"
+              />
             </ListItem>
+
             <ListItem key="3">
-              <Grid container>
-                <Grid item xs={12}>
-                  <ListItemText
-                    align="right"
-                    primary="Cool. i am good, let's catch up!"
-                  ></ListItemText>
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText align="right" secondary="10:30"></ListItemText>
-                </Grid>
-              </Grid>
+              <ChatBubble
+                direction="right"
+                text="Hello what's up?"
+                time="09.30"
+              />
             </ListItem>
           </List>
           <Divider />
