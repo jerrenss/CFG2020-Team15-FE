@@ -57,7 +57,7 @@ const Profile = () => {
                 id="username"
                 label="Username"
                 name="username"
-                value="John Doe"
+                value="Tan Swee Keat"
                 InputLabelProps={{ shrink: true }}
               />
               <TextField
@@ -68,7 +68,7 @@ const Profile = () => {
                 name="email"
                 label="Email"
                 id="email"
-                value="johndoe@gmail.com"
+                value="tansweeKeat_67@gmail.com"
                 InputLabelProps={{ shrink: true }}
               />
               <TextField
@@ -90,7 +90,7 @@ const Profile = () => {
                 name="accountType"
                 label="Account Type"
                 id="accountType"
-                value="STUDENT"
+                value="VOLUNTEER"
                 disabled
                 InputLabelProps={{ shrink: true }}
               />

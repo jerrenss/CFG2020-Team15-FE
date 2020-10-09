@@ -82,6 +82,7 @@ const ChatWindow = () => {
                 direction="left"
                 text="Hello how's everyone doing? There is a an upcoming lesson this Friday."
                 time="09.30"
+                name="Tan Swee Keat"
               />
             </ListItem>
 
@@ -90,6 +91,7 @@ const ChatWindow = () => {
                 direction="right"
                 text="Alright, Mr Tan!"
                 time="09.30"
+                name="Maurice"
               />
             </ListItem>
 
@@ -98,6 +100,7 @@ const ChatWindow = () => {
                 direction="right"
                 text="Will be attending"
                 time="09.30"
+                name="Maurice"
               />
             </ListItem>
           </List>

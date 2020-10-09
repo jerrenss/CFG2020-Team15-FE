@@ -18,15 +18,15 @@ export default function Dashboard() {
     {
       id: '1',
       title: 'JA Leader Dialogue',
-      attendence: '10/12',
-      progress: 70,
+      attendence: '6/12',
+      progress: 50,
       image: '/images/program_2.jpg',
     },
     {
       id: '2',
       title: 'JA Innovation Camp',
-      attendence: '12/12',
-      progress: 50,
+      attendence: '11/12',
+      progress: 90,
       image: '/images/program_3.jpg',
     },
   ]
