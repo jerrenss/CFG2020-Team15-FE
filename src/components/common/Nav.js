@@ -6,8 +6,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
     '@global': {
@@ -32,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
   
-export default function Pricing() {
+export default function Nav() {
     const classes = useStyles();
     
     return (
