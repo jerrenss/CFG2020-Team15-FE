@@ -41,14 +41,14 @@ export default function Pricing() {
         <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
             <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            AJ Hong Kong
+            JA Hong Kong
             </Typography>
             <nav>
             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
                 All Progams
             </Link>
             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
-                MY Programs
+                My Programs
             </Link>
             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
                 Profile

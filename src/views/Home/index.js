@@ -7,12 +7,12 @@ import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { useRouter } from 'next/router'
 
 function Copyright() {
   return (
@@ -61,6 +61,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignInSide() {
   const classes = useStyles();
+  const router = useRouter()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // userService.getUserByUsername(username).then((response) => {
+    //   //get the user id
+    //   const userId = response._id
+    //   window.localStorage.setItem('userId', userId)
+    // })
+    router.push('/dashboard')
+  }
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -107,6 +118,7 @@ export default function SignInSide() {
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={handleSubmit}
             >
               Sign In
             </Button>
