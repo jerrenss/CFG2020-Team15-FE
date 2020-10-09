@@ -20,19 +20,19 @@ const useStyles =  makeStyles((theme) => ({
   },
 }));
 
-function createData(title, marks, comments, markedBy) {
-  return { title, marks, comments, markedBy };
+function createData(session, attendance) {
+  return { session, attendance };
 }
 
 const rows = [
-  createData('Project 1 (15%)', "83.3/100","N.A", "David"),
-  createData('Project 2 (15%)', "73.3/100", "N.A", "David"),
-  createData('Assignment 1 (25%)', "83.3/100", "N.A", "David"),
-  createData('Test 1 (35%)', "93.3/100", "well done!", "David"),
-  createData('Assignment 3 (10%)', "63.3/100", "work harder!", "David")
+  createData('session 1', '25/25'),
+  createData('session 2', '24/25'),
+  createData('session 3', '23/25'),
+  createData('session 4', '17/25'),
+  createData('session 5', '23/25')
 ];
 
-export default function Gradebook() {
+export default function Attendance() {
   const classes = useStyles();
 
   return (
@@ -42,27 +42,17 @@ export default function Gradebook() {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Graded Item</TableCell>
-            <TableCell align="right">Marks</TableCell>
-            <TableCell align="right">Comments</TableCell>
-            <TableCell align="right">Marked by</TableCell>
-            <TableCell align="right">Verify Results</TableCell>
+            <TableCell align="center">Session</TableCell>
+            <TableCell align="center">Attendance</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.title}
+              <TableCell component="th" scope="row" align="center">
+                {row.session}
               </TableCell>
-              <TableCell align="right">{row.marks}</TableCell>
-              <TableCell align="right">{row.comments}</TableCell>
-              <TableCell align="right">{row.markedBy}</TableCell>
-              <TableCell align="right">
-              <Button variant="contained" color="primary">
-                    Verify
-                </Button>
-              </TableCell>
+              <TableCell align="center">{row.attendance}</TableCell>
             </TableRow>
           ))}
         </TableBody>
