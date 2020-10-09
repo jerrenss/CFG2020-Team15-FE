@@ -94,6 +94,18 @@ const Profile = () => {
                 disabled
                 InputLabelProps={{ shrink: true }}
               />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="level"
+                label="Level"
+                id="level"
+                value="SECONDARY"
+                disabled
+                InputLabelProps={{ shrink: true }}
+              />
               <Button
                 type="submit"
                 fullWidth
