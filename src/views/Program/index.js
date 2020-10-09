@@ -27,6 +27,7 @@ import BackupIcon from '@material-ui/icons/Backup'
 import FeedbackIcon from '@material-ui/icons/Feedback'
 import FolderIcon from '@material-ui/icons/Folder'
 import AssignmentIcon from '@material-ui/icons/Assignment'
+import Feedback from './feedback.js'
 
 const drawerWidth = 240
 
@@ -78,7 +79,7 @@ export default function Program() {
       case 'Submission':
         return <Materials />
       case 'Feedback':
-        return <Materials />
+        return <Feedback />
     }
   }
   return (
