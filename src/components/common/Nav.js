@@ -54,7 +54,7 @@ export default function Nav() {
             <Link
               variant="button"
               color="textPrimary"
-              href="/dashboard"
+              href="/student/programs"
               className={classes.link}
             >
               All Progams
@@ -62,7 +62,7 @@ export default function Nav() {
             <Link
               variant="button"
               color="textPrimary"
-              href="/dashboard"
+              href="/student/programs-enrolled"
               className={classes.link}
             >
               My Programs
@@ -70,7 +70,7 @@ export default function Nav() {
             <Link
               variant="button"
               color="textPrimary"
-              href="/dashboard/profile"
+              href="/student/profile"
               className={classes.link}
             >
               Profile
