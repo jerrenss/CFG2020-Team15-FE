@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Nav = (props) => {
+const VolunteerNav = (props) => {
   const classes = useStyles()
   const router = useRouter()
 
@@ -56,19 +56,16 @@ const Nav = (props) => {
           <PublicIcon />
         </IconButton>
         <Typography className={classes.title}>JA Hong Kong</Typography>
-        {/* <Link href="/student/programs">
-          <Button className={classes.button}>Analytics</Button>
-        </Link> */}
-        <Link href="/student/programs">
+        <Link href="/volunteer/programs">
           <Button className={classes.button}>All Programs</Button>
         </Link>
-        <Link href="/student/programs-enrolled">
+        <Link href="/volunteer/programs-enrolled">
           <Button className={classes.button}>My Programs</Button>
         </Link>
-        <Link href="/student/chat">
+        <Link href="/volunteer/chat">
           <Button className={classes.button}>My Chats</Button>
         </Link>
-        <Link href="/student/profile">
+        <Link href="/volunteer/profile">
           <Button className={classes.button}>Profile</Button>
         </Link>
         <Link href="/">
@@ -81,4 +78,4 @@ const Nav = (props) => {
   )
 }
 
-export default Nav
+export default VolunteerNav

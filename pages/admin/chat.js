@@ -1,3 +1,3 @@
-import Chat from '../../src/views/Chat'
+import Chat from '../../src/views/admin/Chat'
 
 export default Chat
