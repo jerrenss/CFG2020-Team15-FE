@@ -46,8 +46,17 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   export default function Overview(props) {
+    const program = {
+        title: 'JA Leader Dialogue',
+        description:
+          'The program enables students to learn from young role models and enhance their understanding of future workplace. Through the seminar, a leader will share with students their life stories, ups and downs in their career, role models, what they look for when hiring and advise students on the importance of life planning and life-long learning.',
+        programLength: '1.5 hours (OLE learning time)',
+        targetParticipants: 'Form 1 to Form 6 students',
+        classSize: '150 students (minimum for school venue',
+        language: 'English or Cantonese',
+      }
     const classes = useStyles();
-    const {title, description, programLength, targetParticipants, classSize, language} = props.program;
+    const {title, description, programLength, targetParticipants, classSize, language} = program;
     return (
       <React.Fragment>
         <CssBaseline />

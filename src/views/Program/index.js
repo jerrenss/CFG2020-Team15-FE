@@ -17,6 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import Overview from './overview'
 import Materials from './materials'
+import Gradebook from './gradebook'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -28,6 +29,7 @@ import FeedbackIcon from '@material-ui/icons/Feedback'
 import FolderIcon from '@material-ui/icons/Folder'
 import AssignmentIcon from '@material-ui/icons/Assignment'
 import Feedback from './feedback.js'
+
 
 const drawerWidth = 240
 
@@ -58,24 +60,16 @@ const useStyles = makeStyles((theme) => ({
 export default function Program() {
   const [currentTab, setCurrentTab] = useState('Overview')
   const classes = useStyles()
-  const program = {
-    title: 'JA Leader Dialogue',
-    description:
-      'The program enables students to learn from young role models and enhance their understanding of future workplace. Through the seminar, a leader will share with students their life stories, ups and downs in their career, role models, what they look for when hiring and advise students on the importance of life planning and life-long learning.',
-    programLength: '1.5 hours (OLE learning time)',
-    targetParticipants: 'Form 1 to Form 6 students',
-    classSize: '150 students (minimum for school venue',
-    language: 'English or Cantonese',
-  }
+
 
   const renderView = (currentTab) => {
     switch (currentTab) {
       case 'Overview':
-        return <Materials />
+        return <Overview />
       case 'Materials':
         return <Materials />
       case 'Gradebook':
-        return <Materials />
+        return <Gradebook />
       case 'Submission':
         return <Materials />
       case 'Feedback':
@@ -95,7 +89,7 @@ export default function Program() {
         }}
       >
         <Toolbar>
-          <Typography>{program.title}</Typography>
+          <Typography>JA Leader Dialogue</Typography>
         </Toolbar>
         <div className={classes.drawerContainer}>
           <List>

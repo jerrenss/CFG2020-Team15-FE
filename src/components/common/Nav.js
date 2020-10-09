@@ -57,6 +57,9 @@ const Nav = (props) => {
         </IconButton>
         <Typography className={classes.title}>JA Hong Kong</Typography>
         <Link href="/student/programs">
+          <Button className={classes.button}>Analytics</Button>
+        </Link>
+        <Link href="/student/programs">
           <Button className={classes.button}>All Programs</Button>
         </Link>
         <Link href="/student/programs-enrolled">
