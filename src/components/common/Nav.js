@@ -1,91 +1,78 @@
 import React from 'react'
+import makeStyles from '@material-ui/core/styles/makeStyles'
+import { Typography, Button } from '@material-ui/core'
 import AppBar from '@material-ui/core/AppBar'
-import Button from '@material-ui/core/Button'
-import CssBaseline from '@material-ui/core/CssBaseline'
 import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
-import Link from '@material-ui/core/Link'
-import { makeStyles } from '@material-ui/core/styles'
+import IconButton from '@material-ui/core/IconButton'
+import PublicIcon from '@material-ui/icons/Public'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
-  '@global': {
-    ul: {
-      margin: 0,
-      padding: 0,
-      listStyle: 'none',
+  root: {
+    '& .MuiButton-label': {
+      color: '#FFFFFF',
     },
   },
-  appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
   toolbar: {
-    flexWrap: 'wrap',
+    minHeight: 50,
+    backgroundColor: theme.palette.primary.main,
   },
-  toolbarTitle: {
+  icon: {
+    color: '#FFFFFF',
+  },
+  title: {
     flexGrow: 1,
+    textTransform: 'uppercase',
+    color: '#FFFFFF',
+    fontWeight: 600,
   },
-  link: {
-    margin: theme.spacing(1, 1.5),
+  button: {
+    textTransform: 'uppercase',
+    '&:focus': {
+      outline: 'none',
+    },
   },
 }))
 
-export default function Nav() {
+const Nav = (props) => {
   const classes = useStyles()
+  const router = useRouter()
+
+  const redirectHome = (e) => {
+    e.preventDefault()
+    router.push('/')
+  }
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <AppBar
-        position="static"
-        color="default"
-        elevation={0}
-        className={classes.appBar}
-      >
-        <Toolbar className={classes.toolbar}>
-          <Typography
-            variant="h6"
-            color="inherit"
-            noWrap
-            className={classes.toolbarTitle}
-          >
-            JA Hong Kong
-          </Typography>
-          <nav>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="/student/programs"
-              className={classes.link}
-            >
-              All Progams
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="/student/programs-enrolled"
-              className={classes.link}
-            >
-              My Programs
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="/student/profile"
-              className={classes.link}
-            >
-              Profile
-            </Link>
-          </nav>
-          <Button
-            href="#"
-            color="primary"
-            variant="outlined"
-            className={classes.link}
-          >
-            Logout
+    <AppBar position="fixed" className={classes.root}>
+      <Toolbar className={classes.toolbar}>
+        <IconButton
+          className={classes.icon}
+          edge="start"
+          onClick={redirectHome}
+        >
+          <PublicIcon />
+        </IconButton>
+        <Typography className={classes.title}>JA Hong Kong</Typography>
+        <Link href="/student/programs">
+          <Button className={classes.button}>All Programs</Button>
+        </Link>
+        <Link href="/student/programs-enrolled">
+          <Button className={classes.button}>My Programs</Button>
+        </Link>
+        <Link href="/student/profile">
+          <Button className={classes.button}>Profile</Button>
+        </Link>
+        <Link href="/">
+          <Button className={classes.button} startIcon={<ExitToAppIcon />}>
+            Sign Out
           </Button>
-        </Toolbar>
-      </AppBar>
-    </React.Fragment>
+        </Link>
+      </Toolbar>
+    </AppBar>
   )
 }
+
+export default Nav
