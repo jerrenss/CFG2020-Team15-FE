@@ -40,27 +40,8 @@ const ChatWindow = () => {
 
   return (
     <div>
-      <Grid container>
-        <Grid item xs={12}>
-          <Typography variant="h5" className="header-message">
-            Chat
-          </Typography>
-        </Grid>
-      </Grid>
-
       <Grid container component={Paper} className={classes.chatSection}>
         <Grid item xs={3} className={classes.borderRight500}>
-          <List>
-            <ListItem button key="RemySharp">
-              <ListItemIcon>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="https://material-ui.com/static/images/avatar/1.jpg"
-                />
-              </ListItemIcon>
-              <ListItemText primary="John Wick"></ListItemText>
-            </ListItem>
-          </List>
           <Divider />
           <Grid item xs={12} style={{ padding: '10px' }}>
             <TextField
@@ -80,7 +61,7 @@ const ChatWindow = () => {
                 />
               </ListItemIcon>
               <ListItemText primary="Remy Sharp">Remy Sharp</ListItemText>
-              <ListItemText secondary="online" align="right"></ListItemText>
+              {/* <ListItemText secondary="online" align="right"></ListItemText> */}
             </ListItem>
             <ListItem button key="Alice">
               <ListItemIcon>
