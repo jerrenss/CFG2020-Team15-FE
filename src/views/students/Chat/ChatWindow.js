@@ -68,7 +68,7 @@ const ChatWindow = () => {
                   <ReceiptIcon />
                 </Avatar>
               </ListItemIcon>
-              <ListItemText>JA - Entrepreneurship</ListItemText>
+              <ListItemText>JA - Innovation Camp</ListItemText>
             </ListItem>
           </List>
         </Grid>

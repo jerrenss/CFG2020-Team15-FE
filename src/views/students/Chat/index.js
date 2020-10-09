@@ -3,7 +3,6 @@ import Nav from '../../../components/common/Nav.js'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-import ProgramCard from '../../components/common/ProgramCard.js'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import CardActions from '@material-ui/core/CardActions'
@@ -73,12 +72,12 @@ export default function Dashboard() {
         >
           <InsertEmoticonIcon
             color="primary"
-            style={{ fontSize: 50 }}
+            style={{ fontSize: 40, marginRight: '8px' }}
           ></InsertEmoticonIcon>
-          Let's Chit Chat!
+          Let's Chat!
           <InsertEmoticonIcon
             color="primary"
-            style={{ fontSize: 50 }}
+            style={{ fontSize: 40, marginLeft: '8px' }}
           ></InsertEmoticonIcon>
         </Typography>
         {/* </Container>

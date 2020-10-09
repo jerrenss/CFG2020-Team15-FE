@@ -24,6 +24,8 @@ import Drawer from '@material-ui/core/Drawer'
 import { FormatAlignRight } from '@material-ui/icons';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import IconButton from '@material-ui/core/IconButton';
+import PublishIcon from '@material-ui/icons/Publish';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 
 
@@ -80,11 +82,18 @@ const useStyles = makeStyles((theme) => ({
     },
     paddingTop: {
         paddingTop: 35
+    },
+    iconPaddingTop: {
+        paddingTop: 20
+    },
+    padSubmission : {
+        paddingTop : 10,
+        paddingBottom : 10
     }
 }));
 
 function createData(name, uploadedDate) {
-    return { name, uploadedDate};
+    return { name, uploadedDate };
 }
 
 const rows = [
@@ -136,6 +145,16 @@ export default function Overview(props) {
                         </TableBody>
                     </Table>
                 </TableContainer>
+            </Container>
+            <br />
+            <Container maxWidth="md" >
+                <Card align="center" className={classes.padSubmission}>
+                    <CloudUploadIcon color="disabled" style={{ fontSize: 20 }}/>
+                    <Typography display="inline" variant="subtitle1" align="center" color="textSecondary" paragraph>
+                        Drag and Drop Your Files Here For Submission
+              </Typography>
+                    <CloudUploadIcon color="disabled" style={{ fontSize: 20 }}/>
+                </Card>
             </Container>
         </div>
     );

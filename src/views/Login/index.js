@@ -1,17 +1,16 @@
-
-import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react'
+import Avatar from '@material-ui/core/Avatar'
+import Button from '@material-ui/core/Button'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import TextField from '@material-ui/core/TextField'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import Checkbox from '@material-ui/core/Checkbox'
+import Link from '@material-ui/core/Link'
+import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
 import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
@@ -20,12 +19,20 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.main,
   },
   image: {
-    backgroundImage: 'url(https://source.unsplash.com/random)',
+    // backgroundImage: 'url(https://source.unsplash.com/random)',
+    backgroundImage: 'url(/images/JAHK_wallpaper.jpg)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+      theme.palette.type === 'light'
+        ? theme.palette.grey[50]
+        : theme.palette.grey[900],
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+  },
+  logo: {
+    height: 62,
+    width: 280,
+    marginBottom: theme.spacing(3),
   },
   paper: {
     margin: theme.spacing(8, 4),
@@ -44,10 +51,10 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+}))
 
 export default function Login() {
-  const classes = useStyles();
+  const classes = useStyles()
   const router = useRouter()
 
   const handleSubmit = (e) => {
@@ -64,13 +71,18 @@ export default function Login() {
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
-      <Grid item xs={12} sm={8} md={5}elevation={6} square>
+      <Grid item xs={12} sm={8} md={5} elevation={6} square>
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
+          {/* <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
-          </Avatar>
+          </Avatar> */}
+          <img
+            className={classes.logo}
+            src="/images/JAHK_Logo.png"
+            alt="JAHK Logo"
+          />
           <Typography component="h1" variant="h5">
-            Sign in
+            Welcome Back!
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
@@ -125,5 +137,5 @@ export default function Login() {
         </div>
       </Grid>
     </Grid>
-  );
+  )
 }
