@@ -19,7 +19,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import Nav from '../../components/common/Nav.js';
+import Nav from '../../../components/common/Nav.js';
 import Drawer from '@material-ui/core/Drawer'
 import { FormatAlignRight } from '@material-ui/icons';
 import GetAppIcon from '@material-ui/icons/GetApp';

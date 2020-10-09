@@ -1,3 +1,3 @@
-import Profile from '../../src/views/Profile'
+import Profile from '../../src/views/students/Profile'
 
 export default Profile
