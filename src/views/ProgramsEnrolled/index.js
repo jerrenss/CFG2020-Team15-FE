@@ -14,12 +14,36 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Dashboard() {
     const classes = useStyles();
-    const programs = [1,2,3,4,5,6,7,8,9];
+    const programs = [
+        {
+            id:"1",
+            title:"JA Leader Dialogue",
+            attendence:"10/12",
+            progress:50
+        },
+        {
+            id:"2",
+            title:"JA Leader Dialogue",
+            attendence:"10/12",
+            progress:50
+        },{
+            id:"3",
+            title:"JA Leader Dialogue",
+            attendence:"10/12",
+            progress:50
+        },
+        {
+            id:"4",
+            title:"JA Leader Dialogue",
+            attendence:"10/12",
+            progress:50
+        },
+    ];
     let programCards = [];
     for (let i = 0; i < programs.length; ++i) {
         programCards.push(
             <Grid item xs={12} sm={12} md={6} lg={4} spacing={3} key={`item_${i}`}>
-                <ProgramEnrolledCard />
+                <ProgramEnrolledCard program={programs[i]}/>
             </Grid>
         )
     }
