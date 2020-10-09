@@ -9,7 +9,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { useRouter } from 'next/router'
-import Navbar from '../../components/common/Navbar'
+import Nav from '../../components/common/Nav'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 
 const useStyles = makeStyles((theme) => ({
@@ -38,7 +38,7 @@ const Profile = () => {
   const classes = useStyles()
   return (
     <Box>
-      <Navbar />
+      <Nav />
       <Container maxWidth="lg">
         <Grid item xs={12} elevation={6} square>
           <div className={classes.paper}>
