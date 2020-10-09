@@ -1,38 +1,75 @@
-import React from 'react'
+import React from 'react';
+import clsx from 'clsx';
+import Toolbar from '@material-ui/core/Toolbar'
+import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
 import Nav from '../../components/common/Nav.js'
-import Grid from '@material-ui/core/Grid'
-import { makeStyles } from '@material-ui/core/styles'
-import Container from '@material-ui/core/Container'
-import ProgramCard from '../../components/common/ProgramCard.js'
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Link from '@material-ui/core/Link';
+import MenuIcon from '@material-ui/icons/Menu';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import { mainListItems } from './listItems';
+
+
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-  cardGrid: {
-    paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(3),
+  root: {
+    display: 'flex',
   },
-}))
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    paddingTop: 50,
+    width: drawerWidth,
+  },
+  drawerContainer: {
+    overflow: 'auto',
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
+  
+}));
 
-export default function Program(props) {
-    console.log(props.program);
-    const classes = useStyles();
-    const programs = [1,2,3,4,5,6,7,8,9];
-    let programCards = [];
-    for (let i = 0; i < programs.length; ++i) {
-        programCards.push(
-            <Grid item xs={12} sm={12} md={6} lg={4} spacing={3} key={`item_${i}`}>
-                <ProgramCard />
-            </Grid>
-        )
+export default function Dashboard() {
+  const classes = useStyles();
+    const program = {
+        title: "JA Leader Dialogue"
     }
-
   return (
-    <div>
+    <div className={classes.root}>
+      <CssBaseline />
+      <div className={classes.appBar}>
       <Nav />
-      <Container className={classes.cardGrid} maxWidth="lg">
-        <Grid container spacing={5}>
-          {programCards}
-        </Grid>
-      </Container>
+      </div>
+      <Drawer
+        variant="permanent"
+        classes={{
+            paper: classes.drawerPaper,
+          }}
+      >
+        <Toolbar>
+            <Typography>{program.title}</Typography>
+        </Toolbar>
+        <div className={classes.drawerContainer}>
+        <List>{mainListItems}</List>
+        </div>
+      </Drawer>   
     </div>
-  )
+  );
 }
