@@ -1,9 +1,9 @@
 import React from 'react'
-import Nav from '../../components/common/Nav.js'
+import AdminNav from '../../../components/common/AdminNav.js'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-import ProgramCard from '../../components/common/ProgramCard.js'
+import ProgramCard from '../../../components/common/ProgramCard.js'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import CardActions from '@material-ui/core/CardActions'
@@ -62,7 +62,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <Nav />
+      <AdminNav />
       <br />
       <Container className={classes.cardGrid} maxWidth="lg">
         <Typography

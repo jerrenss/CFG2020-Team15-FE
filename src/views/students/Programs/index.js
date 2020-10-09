@@ -1,9 +1,9 @@
 import React from 'react'
-import Nav from '../../components/common/Nav.js'
+import Nav from '../../../components/common/Nav.js'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-import ProgramCard from '../../components/common/ProgramCard.js'
+import ProgramCard from '../../../components/common/ProgramCard.js'
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
