@@ -70,6 +70,14 @@ export default function Nav() {
             <Link
               variant="button"
               color="textPrimary"
+              href="/dashboard/chat"
+              className={classes.link}
+            >
+              My Chats
+            </Link>
+            <Link
+              variant="button"
+              color="textPrimary"
               href="/dashboard/profile"
               className={classes.link}
             >
