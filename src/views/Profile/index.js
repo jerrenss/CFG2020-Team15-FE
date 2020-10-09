@@ -39,7 +39,7 @@ const Profile = () => {
   return (
     <Box>
       <Nav />
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Grid item xs={12} elevation={6} square>
           <div className={classes.paper}>
             <AccountCircleIcon

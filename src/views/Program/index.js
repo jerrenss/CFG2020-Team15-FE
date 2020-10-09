@@ -12,17 +12,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function Dashboard() {
-  const classes = useStyles()
-  const programs = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-  let programCards = []
-  for (let i = 0; i < programs.length; ++i) {
-    programCards.push(
-      <Grid item xs={12} sm={12} md={6} lg={4} spacing={3} key={`item_${i}`}>
-        <ProgramCard />
-      </Grid>,
-    )
-  }
+export default function Program(props) {
+    console.log(props.program);
+    const classes = useStyles();
+    const programs = [1,2,3,4,5,6,7,8,9];
+    let programCards = [];
+    for (let i = 0; i < programs.length; ++i) {
+        programCards.push(
+            <Grid item xs={12} sm={12} md={6} lg={4} spacing={3} key={`item_${i}`}>
+                <ProgramCard />
+            </Grid>
+        )
+    }
 
   return (
     <div>

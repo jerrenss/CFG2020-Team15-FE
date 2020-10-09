@@ -37,6 +37,12 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "auto",
         marginRight: "auto",
     },
+    cardGrid: {
+        paddingTop: theme.spacing(5),
+    },
+    cardGridChats: {
+        paddingTop: theme.spacing(2),
+    },
     title: {
         fontSize: 14,
     },
@@ -57,12 +63,13 @@ export default function Dashboard() {
         <div>
             <Nav />
             <br />
-            <Typography variant="h1" color="textPrimary" component="p" align="center">
-                Chats
-            </Typography>
-
             <Container className={classes.cardGrid} maxWidth="lg">
-                <Grid container direction="row" justify="space-evenly" alignItems="baseline">
+                <Typography variant="h1" color="textPrimary" component="p" align="center">
+                    Chats
+            </Typography>
+            </Container>
+            <Container className={classes.cardGridChats} maxWidth="lg">
+                <Grid className={classes.cardGridChats} container direction="row" justify="space-evenly" alignItems="baseline">
                     <Card container direction="row" justify="space-evenly" alignItems="baseline" onClick={() => {
                         console.log("P1 Calling...")
                     }}>
@@ -75,6 +82,21 @@ export default function Dashboard() {
                         </CardContent>
                     </Card>
                 </Grid>
+
+                <Grid className={classes.cardGridChats} container direction="row" justify="space-evenly" alignItems="baseline">
+                    <Card container direction="row" justify="space-evenly" alignItems="baseline" onClick={() => {
+                        console.log("P1 Calling...")
+                    }}>
+                        <CardContent >
+                            <Avatar className={classes.avatar}>
+                                P1
+                    </Avatar>
+                            <Typography display="inline" variant="h6" color="textPrimary" component="p" align="left">Program 1 Chat</Typography>
+                            <Typography >Last Message Sent On: {Date()}</Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            
             </Container>
         </div>
     )
