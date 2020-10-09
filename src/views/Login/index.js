@@ -59,12 +59,15 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // userService.getUserByUsername(username).then((response) => {
-    //   //get the user id
-    //   const userId = response._id
-    //   window.localStorage.setItem('userId', userId)
-    // })
-    router.push('/student/programs')
+    const username = document.getElementById('username').value
+    const prefix = username.substring(0, 2)
+    if (prefix === 'ST') {
+      router.push('/student/programs')
+    } else if (prefix === 'VL') {
+      router.push('/volunteer/programs')
+    } else if (prefix === 'AD') {
+      router.push('/admin/programs')
+    }
   }
 
   return (
@@ -90,10 +93,10 @@ export default function Login() {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="Username"
+              name="username"
+              autoComplete="username"
               autoFocus
             />
             <TextField
