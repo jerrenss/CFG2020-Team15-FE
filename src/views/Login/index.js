@@ -67,6 +67,8 @@ export default function Login() {
       router.push('/volunteer/programs')
     } else if (prefix === 'AD') {
       router.push('/admin/programs')
+    } else {
+      router.push('/student/programs')
     }
   }
 
