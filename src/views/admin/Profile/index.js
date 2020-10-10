@@ -42,8 +42,13 @@ const Profile = () => {
       <Container maxWidth="md">
         <Grid item xs={12} elevation={6} square>
           <div className={classes.paper}>
-            <AccountCircleIcon
+            {/* <AccountCircleIcon
               style={{ height: '100px', width: '100px', color: '#C0C0C0' }}
+            /> */}
+            <Avatar
+              alt="Remy"
+              src="https://material-ui.com/static/images/avatar/1.jpg"
+              style={{ height: '100px', width: '100px' }}
             />
             <Typography component="h1" variant="h5">
               Profile
@@ -90,7 +95,7 @@ const Profile = () => {
                 name="accountType"
                 label="Account Type"
                 id="accountType"
-                value="STUDENT"
+                value="ADMIN"
                 disabled
                 InputLabelProps={{ shrink: true }}
               />
@@ -98,7 +103,7 @@ const Profile = () => {
                 type="submit"
                 fullWidth
                 variant="contained"
-                color="primary"
+                color="secondary"
                 className={classes.save}
               >
                 Save Changes

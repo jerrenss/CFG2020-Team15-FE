@@ -55,20 +55,29 @@ const Nav = (props) => {
         >
           <PublicIcon />
         </IconButton>
-        <Typography className={classes.title}>Logged In As: Student</Typography>
-        {/* <Link href="/student/programs">
-          <Button className={classes.button}>Analytics</Button>
-        </Link> */}
-        <Link href="/student/programs">
+        <Typography className={classes.title}>
+          Logged In As:{' '}
+          <Typography
+            variant="inline"
+            style={{
+              padding: '4px',
+              backgroundColor: '#ffff1a',
+              color: 'black',
+            }}
+          >
+            Student
+          </Typography>
+        </Typography>
+        <Link href="/student/programs" passHref>
           <Button className={classes.button}>All Programs</Button>
         </Link>
-        <Link href="/student/programs-enrolled">
+        <Link href="/student/programs-enrolled" passHref>
           <Button className={classes.button}>My Programs</Button>
         </Link>
-        <Link href="/student/chat">
+        <Link href="/student/chat" passHref>
           <Button className={classes.button}>My Chats</Button>
         </Link>
-        <Link href="/student/profile">
+        <Link href="/student/profile" passHref>
           <Button className={classes.button}>Profile</Button>
         </Link>
         <Link href="/">
