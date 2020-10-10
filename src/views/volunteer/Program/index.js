@@ -133,11 +133,11 @@ export default function Program() {
               </ListItemIcon>
               <ListItemText primary="Attendance" />
             </ListItem>
-            <ListItem button onClick={() => setCurrentTab('FeedbackReceive')}>
+            <ListItem button onClick={() => setCurrentTab('FeedbackReceived')}>
               <ListItemIcon>
                 <DynamicFeedIcon />
               </ListItemIcon>
-              <ListItemText primary="FeedbackReceive" />
+              <ListItemText primary="Feedback Received" />
             </ListItem>
             <ListItem button onClick={() => setCurrentTab('Feedback')}>
               <ListItemIcon>

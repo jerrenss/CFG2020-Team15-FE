@@ -89,7 +89,7 @@ const Feedback = (props) => {
           <form className={classes.form}>
             <Grid container spacing={3}>
               <Grid item xs={5} lg={3}>
-                <Typography>How was the pace of the workshop?</Typography>
+                <Typography>How is the student participation in the program?</Typography>
               </Grid>
               <Grid item xs={7} lg={9}>
                 <Rating
@@ -100,7 +100,7 @@ const Feedback = (props) => {
                 />
               </Grid>
               <Grid item xs={5} lg={3}>
-                <Typography>Were there enough materials provided?</Typography>
+                <Typography>Is the length of program session suitable?</Typography>
               </Grid>
               <Grid item xs={7} lg={9}>
                 <Rating
@@ -112,7 +112,7 @@ const Feedback = (props) => {
               </Grid>
               <Grid item xs={5} lg={3}>
                 <Typography>
-                  How would you rate your mentor's teaching ability?
+                  How would you rate the overall student engagement in this program?
                 </Typography>
               </Grid>
               <Grid item xs={7} lg={9}>
@@ -125,7 +125,7 @@ const Feedback = (props) => {
               </Grid>
               <Grid item xs={5} lg={3}>
                 <Typography>
-                  Are there any other feedback you would like to provide?
+                  Any comment or feedback you would like to provide to JA HONGKONG?
                 </Typography>
               </Grid>
               <Grid item xs={7} lg={9}>

@@ -14,14 +14,53 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Container from '@material-ui/core/Container';
 
-const useRowStyles = makeStyles({
-  root: {
-    '& > *': {
-      borderBottom: 'unset',
-    },
-  },
-});
+const useRowStyles =  makeStyles((theme) => ({
+    root: {
+        '& > *': {
+            borderBottom: 'unset',
+          },
+        flexDirection: 'column',
+      },
+    }));
+    const useStyles = makeStyles((theme) => ({
+        icon: {
+            marginRight: theme.spacing(2),
+        },
+        heroContent: {
+            backgroundColor: theme.palette.background.paper,
+            padding: theme.spacing(8, 0, 6),
+        },
+        heroButtons: {
+            marginTop: theme.spacing(4),
+        },
+        cardGrid: {
+            paddingTop: theme.spacing(8),
+        },
+        card: {
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+        },
+        cardMedia: {
+            paddingTop: '56.25%', // 16:9
+        },
+        cardContent: {
+            flexGrow: 1,
+        },
+        footer: {
+            backgroundColor: theme.palette.background.paper,
+            padding: theme.spacing(6),
+        },
+        table: {
+            minWidth: 700,
+        },
+        paddingTop: {
+            paddingTop: 35
+        }
+    }));
+    
 
 function createData(sessionId, overallPace, satisfactionLevel) {
   return {
@@ -29,8 +68,9 @@ function createData(sessionId, overallPace, satisfactionLevel) {
     overallPace,
     satisfactionLevel,
     feedbacks: [
-      { feedback: '2020-01-05', customerId: '11091700', amount: 3 },
-      { date: '2020-01-02', customerId: 'Anonymous', amount: 1 },
+      { feedback: 'I love your way of teaching!', student: 'Anonymous' },
+      { feedback: 'Your lesson is easy to follow, thanks for teaching us', student: 'Anonymous' },
+      { feedback: 'Thanks for teaching us!', student: 'John Doe' },
     ],
   };
 }
@@ -49,40 +89,26 @@ function Row(props) {
           </IconButton>
         </TableCell>
         <TableCell component="th" scope="row">
-          {row.name}
+          {row.sessionId}
         </TableCell>
-        <TableCell align="right">{row.calories}</TableCell>
-        <TableCell align="right">{row.fat}</TableCell>
-        <TableCell align="right">{row.carbs}</TableCell>
-        <TableCell align="right">{row.protein}</TableCell>
+        <TableCell>{row.overallPace}</TableCell>
+        <TableCell align="right">{row.satisfactionLevel}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box margin={1}>
               <Typography variant="h6" gutterBottom component="div">
-                History
+                Feedbacks
               </Typography>
               <Table size="small" aria-label="purchases">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Date</TableCell>
-                    <TableCell>Customer</TableCell>
-                    <TableCell align="right">Amount</TableCell>
-                    <TableCell align="right">Total price ($)</TableCell>
-                  </TableRow>
-                </TableHead>
                 <TableBody>
-                  {row.history.map((historyRow) => (
-                    <TableRow key={historyRow.date}>
+                  {row.feedbacks.map((feedbacksRow) => (
+                    <TableRow key={feedbacksRow.date}>
                       <TableCell component="th" scope="row">
-                        {historyRow.date}
+                        {feedbacksRow.feedback}
                       </TableCell>
-                      <TableCell>{historyRow.customerId}</TableCell>
-                      <TableCell align="right">{historyRow.amount}</TableCell>
-                      <TableCell align="right">
-                        {Math.round(historyRow.amount * row.price * 100) / 100}
-                      </TableCell>
+                      <TableCell>{feedbacksRow.student}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -97,50 +123,49 @@ function Row(props) {
 
 Row.propTypes = {
   row: PropTypes.shape({
-    calories: PropTypes.number.isRequired,
-    carbs: PropTypes.number.isRequired,
-    fat: PropTypes.number.isRequired,
-    history: PropTypes.arrayOf(
+    sessionId: PropTypes.string.isRequired,
+    overallPace: PropTypes.string.isRequired,
+    satisfactionLevel: PropTypes.string.isRequired,
+    feedbaks: PropTypes.arrayOf(
       PropTypes.shape({
-        amount: PropTypes.number.isRequired,
-        customerId: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
+        feedback: PropTypes.string.isRequired,
+        student: PropTypes.string.isRequired,
       }),
     ).isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    protein: PropTypes.number.isRequired,
   }).isRequired,
 };
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0, 3.99),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3, 4.99),
-  createData('Eclair', 262, 16.0, 24, 6.0, 3.79),
-  createData('Cupcake', 305, 3.7, 67, 4.3, 2.5),
-  createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
+  createData('Session 1', "a bit Slow", "Very Good"),
+  createData('Session 2', "too fast", "Satisfied"),
+  createData('Session 3', "Good", "Excellent"),
+  createData('Session 4', "Good", "Very Good"),
+  createData('Session 5', "Good", "Very Good"),
 ];
 
-export default function CollapsibleTable() {
+export default function FeedbackReceived() {
+    const classes = useStyles();
   return (
+    <div>
+    <Container className={classes.cardGrid}  maxWidth="md">
     <TableContainer component={Paper}>
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow>
             <TableCell />
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>Session number</TableCell>
+            <TableCell align="right">Overall Pace</TableCell>
+            <TableCell align="right">Performance</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <Row key={row.name} row={row} />
+            <Row key={row.sessionId} row={row} />
           ))}
         </TableBody>
       </Table>
     </TableContainer>
+    </Container>
+        </div>
   );
 }
