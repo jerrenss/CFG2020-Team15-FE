@@ -18,6 +18,11 @@ import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied'
 import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied'
 import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined'
 import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied'
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +30,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     marginTop: theme.spacing(10),
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -58,7 +70,11 @@ const Feedback = (props) => {
     const { value, ...other } = props
     return <span {...other}>{customIcons[value].icon}</span>
   }
+  const [sessionId, setSessionId] = React.useState('');
 
+  const handleChange = (event) => {
+    setSessionId(event.target.value);
+  };
   const customIcons = {
     1: {
       icon: <SentimentVeryDissatisfiedIcon />,
@@ -88,6 +104,24 @@ const Feedback = (props) => {
         <Container maxWidth="md">
           <form className={classes.form}>
             <Grid container spacing={3}>
+              <Grid item md={12}>
+              <FormControl className={classes.formControl}>
+                <InputLabel id="demo-simple-select-label">Session number</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={sessionId}
+                  onChange={handleChange}
+                >
+                  <MenuItem value={1}>Session 1</MenuItem>
+                  <MenuItem value={2}>Session 2</MenuItem>
+                  <MenuItem value={3}>Session 3</MenuItem>
+                  <MenuItem value={3}>Session 4</MenuItem>
+                  <MenuItem value={3}>Session 5</MenuItem>
+                  <MenuItem value={3}>Session 6</MenuItem>
+                </Select>
+              </FormControl>
+              </Grid>
               <Grid item xs={5} lg={3}>
                 <Typography>How was the pace of the workshop?</Typography>
               </Grid>

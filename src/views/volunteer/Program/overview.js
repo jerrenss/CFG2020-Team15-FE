@@ -13,87 +13,136 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import Box from '@material-ui/core/Box'
+import TextField from '@material-ui/core/TextField'
 
 const useStyles = makeStyles((theme) => ({
-    icon: {
-      marginRight: theme.spacing(2),
-    },
-    heroContent: {
-      backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(8, 0, 6),
-    },
-    heroButtons: {
-      marginTop: theme.spacing(4),
-    },
-    cardGrid: {
-      paddingTop: theme.spacing(8),
-      paddingBottom: theme.spacing(8),
-    },
-    card: {
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-    },
-    cardMedia: {
-      paddingTop: '56.25%', // 16:9
-    },
-    cardContent: {
-      flexGrow: 1,
-    },
-    footer: {
-      backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(6),
-    },
-  }));
-  export default function Overview(props) {
-    const program = {
-        title: 'JA Leader Dialogue',
-        description:
-          'The program enables students to learn from young role models and enhance their understanding of future workplace. Through the seminar, a leader will share with students their life stories, ups and downs in their career, role models, what they look for when hiring and advise students on the importance of life planning and life-long learning.',
-        programLength: '1.5 hours (OLE learning time)',
-        targetParticipants: 'Form 1 to Form 6 students',
-        classSize: '150 students (minimum for school venue',
-        language: 'English or Cantonese',
-      }
-    const classes = useStyles();
-    const {title, description, programLength, targetParticipants, classSize, language} = program;
-    return (
-      <React.Fragment>
-        <CssBaseline />
-        <main>
-          {/* Hero unit */}
-          <div className={classes.heroContent}>
-            <Container maxWidth="md">
-              <Typography component="h2" variant="h2" align="center" color="textPrimary" gutterBottom>
-               {title}
-              </Typography>
-              <Typography variant="subtitle1" align="center" color="textSecondary" paragraph>
-                {description}
-              </Typography>
-              <Typography variant="body1" align="center" color="textSecondary" paragraph>
-                Program Length: {programLength}
-              </Typography>
-              <Typography variant="body1" align="center" color="textSecondary" paragraph>
-                Target Participants: {targetParticipants}
-              </Typography>
-              <Typography variant="body1" align="center" color="textSecondary" paragraph>
-                Class Size: {classSize}
-              </Typography>              
-              <Typography variant="body1" align="center" color="textSecondary" paragraph>
-                Language: {language}
-              </Typography>
-              <Typography variant="body1" align="center" color="textSecondary" paragraph>
-                Program Format: 
-              </Typography>
-              <Typography variant="body1" align="center" color="textSecondary" paragraph>
-                Face-to-face program:  Minimum 150 students, led by a speaker at school 
-              </Typography>
-              <Typography variant="body1" align="center" color="textSecondary" paragraph>
-                Online program: Minimum 150 students, led by a speaker at online platforms
-              </Typography>
-            </Container>
+  paper: {
+    margin: theme.spacing(8, 4),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: '#C0C0C0',
+    height: '100px',
+    width: '100px',
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(1),
+  },
+  save: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}))
+
+const Overview = () => {
+  const classes = useStyles()
+  return (
+    <Box >
+      <Container maxWidth="md">
+        <Grid item xs={12} elevation={6} square>
+          <div className={classes.paper}>
+            <Typography component="h1" variant="h5">
+              Program Overview
+            </Typography>
+            <form className={classes.form} noValidate>
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                id="title"
+                label="Title"
+                name="title"
+                value="JA Leader Dialogue"
+                InputLabelProps={{ shrink: true }}
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="description"
+                label="Description"
+                id="description"
+                value="The program enables students to learn from young role models and enhance their understanding of future workplace. Through the seminar, a leader will share with students their life stories, ups and downs in their career, role models, what they look for when hiring and advise students on the importance of life planning and life-long learning."
+                multiline
+                InputLabelProps={{ shrink: true }}
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="programLength"
+                label="Program Length"
+                id="programLength"
+                value="1.5 hours (OLE learning time)"
+                InputLabelProps={{ shrink: true }}
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="targetParticipants"
+                label="Target Participants"
+                id="targetParticipants"
+                value="Form 1 to Form 6 students"
+                InputLabelProps={{ shrink: true }}
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="classSize"
+                label="Class Size"
+                id="classSize"
+                value="150 students (minimum for school venue"
+                InputLabelProps={{ shrink: true }}
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="language"
+                label="Language"
+                id="language"
+                value="English or Cantonese"
+                InputLabelProps={{ shrink: true }}
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="programFormat"
+                label="Program Format"
+                id="programFormat"
+                value="Face-to-face program: Minimum 150 students, led by a speaker at school Online program: Minimum 150 students, led by a speaker at online platforms"
+                multiline
+                InputLabelProps={{ shrink: true }}
+              />
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.save}
+              >
+                Save Changes
+              </Button>
+            </form>
           </div>
-        </main>
-      </React.Fragment>
-    );
-  }
+        </Grid>
+      </Container>
+    </Box>
+  )
+}
+
+export default Overview
