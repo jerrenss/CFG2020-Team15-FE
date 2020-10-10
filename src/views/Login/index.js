@@ -85,7 +85,7 @@ export default function Login() {
             alt="JAHK Logo"
           />
           <Typography component="h1" variant="h5">
-            Welcome Back!
+            Welcome!
           </Typography>
           <form className={classes.form} noValidate>
             <TextField

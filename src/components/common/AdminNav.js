@@ -55,17 +55,29 @@ const AdminNav = (props) => {
         >
           <PublicIcon />
         </IconButton>
-        <Typography className={classes.title}>Logged In As: Admin</Typography>
-        <Link href="#">
+        <Typography className={classes.title}>
+          Logged In As:{' '}
+          <Typography
+            variant="inline"
+            style={{
+              padding: '4px',
+              backgroundColor: '#ff4d4d',
+              borderRadius: '14px',
+            }}
+          >
+            Admin
+          </Typography>
+        </Typography>{' '}
+        <Link href="http://127.0.0.1:8051/dash/" passHref>
           <Button className={classes.button}>Analytics</Button>
         </Link>
-        <Link href="/admin/programs">
+        <Link href="/admin/programs" passHref>
           <Button className={classes.button}>All Programs</Button>
         </Link>
-        <Link href="/admin/chat">
+        <Link href="/admin/chat" passHref>
           <Button className={classes.button}>My Chats</Button>
         </Link>
-        <Link href="/admin/profile">
+        <Link href="/admin/profile" passHref>
           <Button className={classes.button}>Profile</Button>
         </Link>
         <Link href="/">

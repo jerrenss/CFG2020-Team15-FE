@@ -56,18 +56,28 @@ const VolunteerNav = (props) => {
           <PublicIcon />
         </IconButton>
         <Typography className={classes.title}>
-          Logged In As: Volunteer
+          Logged In As:{' '}
+          <Typography
+            variant="inline"
+            style={{
+              padding: '4px',
+              backgroundColor: '#c880ff',
+              borderRadius: '14px',
+            }}
+          >
+            Volunteer
+          </Typography>
         </Typography>
-        <Link href="/volunteer/programs">
+        <Link href="/volunteer/programs" passHref>
           <Button className={classes.button}>All Programs</Button>
         </Link>
-        <Link href="/volunteer/programs-enrolled">
+        <Link href="/volunteer/programs-enrolled" passHref>
           <Button className={classes.button}>My Programs</Button>
         </Link>
-        <Link href="/volunteer/chat">
+        <Link href="/volunteer/chat" passHref>
           <Button className={classes.button}>My Chats</Button>
         </Link>
-        <Link href="/volunteer/profile">
+        <Link href="/volunteer/profile" passHref>
           <Button className={classes.button}>Profile</Button>
         </Link>
         <Link href="/">
