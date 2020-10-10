@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
-
+import Link from '@material-ui/core/Link';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -39,12 +39,17 @@ export default function ProgramCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="medium" color="primary">
+      <Link href="http://www.jahk.org/wp-content/uploads/2020/09/JA-Leader-Dialogue_Factsheet_Eng.pdf" target="_blank" rel="noopener noreferrer">
+      <Button size="medium" color="primary">
           Program Information
         </Button>
+        </Link>
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSesFEDECvRU3JPbvWDCo5FrKyGNnj4_kIZFcr5z8JSbRFCvlg/viewform?usp=pp_url" target="_blank" rel="noopener noreferrer">
         <Button size="medium" color="primary">
           School Enrollment
         </Button>
+        </Link>
+
       </CardActions>
     </Card>
   )
