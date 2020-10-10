@@ -136,14 +136,6 @@ const ChatWindow = () => {
               </ListItemIcon>
               <ListItemText>JA - Entrepreneurship</ListItemText>
             </ListItem>
-            <ListItem button key="RemySharp">
-              <ListItemIcon>
-                <Avatar>
-                  <ReceiptIcon />
-                </Avatar>
-              </ListItemIcon>
-              <ListItemText>JA - Leader Dialog</ListItemText>
-            </ListItem>
             <ListItem button key="Alice">
               <ListItemIcon>
                 <Avatar>
