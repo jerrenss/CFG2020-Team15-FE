@@ -23,6 +23,8 @@ const useStyles = makeStyles({
   chatSection: {
     width: '100%',
     height: '80vh',
+    border: '1px solid #dee2e6',
+    marginTop: '32px',
   },
   headBG: {
     backgroundColor: '#e0e0e0',
@@ -54,6 +56,86 @@ const ChatWindow = () => {
           </Grid>
           <Divider />
           <List>
+            <ListItem button key="RemySharp">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Leader Dialog</ListItemText>
+            </ListItem>
+            <ListItem button key="Alice">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Entrepreneurship</ListItemText>
+            </ListItem>
+            <ListItem button key="RemySharp">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Leader Dialog</ListItemText>
+            </ListItem>
+            <ListItem button key="Alice">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Entrepreneurship</ListItemText>
+            </ListItem>
+            <ListItem button key="RemySharp">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Leader Dialog</ListItemText>
+            </ListItem>
+            <ListItem button key="Alice">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Entrepreneurship</ListItemText>
+            </ListItem>
+            <ListItem button key="RemySharp">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Leader Dialog</ListItemText>
+            </ListItem>
+            <ListItem button key="Alice">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Entrepreneurship</ListItemText>
+            </ListItem>
+            <ListItem button key="RemySharp">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Leader Dialog</ListItemText>
+            </ListItem>
+            <ListItem button key="Alice">
+              <ListItemIcon>
+                <Avatar>
+                  <ReceiptIcon />
+                </Avatar>
+              </ListItemIcon>
+              <ListItemText>JA - Entrepreneurship</ListItemText>
+            </ListItem>
             <ListItem button key="RemySharp">
               <ListItemIcon>
                 <Avatar>

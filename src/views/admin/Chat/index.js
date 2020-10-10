@@ -73,12 +73,12 @@ export default function Dashboard() {
         >
           <InsertEmoticonIcon
             color="primary"
-            style={{ fontSize: 50 }}
+            style={{ fontSize: 40, marginRight: '8px' }}
           ></InsertEmoticonIcon>
-          Let's Chit Chat!
+          Let's Chat!
           <InsertEmoticonIcon
             color="primary"
-            style={{ fontSize: 50 }}
+            style={{ fontSize: 40, marginLeft: '8px' }}
           ></InsertEmoticonIcon>
         </Typography>
         {/* </Container>
