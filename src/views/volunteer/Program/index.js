@@ -9,15 +9,9 @@ import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import IconButton from '@material-ui/core/IconButton'
 import VolunteerNav from '../../../components/common/VolunteerNav.js'
-import Container from '@material-ui/core/Container'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-import Link from '@material-ui/core/Link'
-import MenuIcon from '@material-ui/icons/Menu'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import Overview from './overview'
 import Materials from './materials'
-import Submission from './submission'
+import FeedbackReceived from './feedbackReceived'
 import Attendance from './attendance'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
@@ -25,12 +19,10 @@ import ListItemText from '@material-ui/core/ListItemText'
 import ListSubheader from '@material-ui/core/ListSubheader'
 import DashboardIcon from '@material-ui/icons/Dashboard'
 import GradeIcon from '@material-ui/icons/Grade'
-import BackupIcon from '@material-ui/icons/Backup'
 import FeedbackIcon from '@material-ui/icons/Feedback'
 import FolderIcon from '@material-ui/icons/Folder'
-import AssignmentIcon from '@material-ui/icons/Assignment'
 import Feedback from './feedback.js'
-
+import DynamicFeedIcon from '@material-ui/icons/DynamicFeed';
 
 const drawerWidth = 240
 
@@ -100,8 +92,8 @@ export default function Program() {
         return <Materials />
       case 'Attendance':
         return <Attendance />
-      case 'Submission':
-        return <Submission />
+      case 'FeedbackReceived':
+        return <FeedbackReceived />
       case 'Feedback':
         return <Feedback />
     }
@@ -141,11 +133,11 @@ export default function Program() {
               </ListItemIcon>
               <ListItemText primary="Attendance" />
             </ListItem>
-            <ListItem button onClick={() => setCurrentTab('Submission')}>
+            <ListItem button onClick={() => setCurrentTab('FeedbackReceive')}>
               <ListItemIcon>
-                <BackupIcon />
+                <DynamicFeedIcon />
               </ListItemIcon>
-              <ListItemText primary="Submission" />
+              <ListItemText primary="FeedbackReceive" />
             </ListItem>
             <ListItem button onClick={() => setCurrentTab('Feedback')}>
               <ListItemIcon>
