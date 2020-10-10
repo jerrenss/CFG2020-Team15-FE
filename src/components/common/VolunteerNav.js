@@ -59,7 +59,11 @@ const VolunteerNav = (props) => {
           Logged In As:{' '}
           <Typography
             variant="inline"
-            style={{ padding: '4px', backgroundColor: '#c880ff' }}
+            style={{
+              padding: '4px',
+              backgroundColor: '#c880ff',
+              borderRadius: '14px',
+            }}
           >
             Volunteer
           </Typography>

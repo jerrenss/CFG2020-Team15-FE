@@ -63,6 +63,7 @@ const Nav = (props) => {
               padding: '4px',
               backgroundColor: '#ffff1a',
               color: 'black',
+              borderRadius: '14px',
             }}
           >
             Student

@@ -62,6 +62,7 @@ const AdminNav = (props) => {
             style={{
               padding: '4px',
               backgroundColor: '#ff4d4d',
+              borderRadius: '14px',
             }}
           >
             Admin
